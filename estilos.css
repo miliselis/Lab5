@@ -1,0 +1,280 @@
+body {
+   position: relative;
+}
+.tex-box{
+        color: #02646b;
+        font-size: 15px;
+        margin-bottom: 10px;
+        text-align: left;
+        position: absolute;
+        line-height: 5px;
+        padding: 70px 10px;
+        font-family: serif;
+      
+   
+}
+
+.btn-1 {
+   display: inline-block;
+   background-color: rgb(255, 0, 0);
+   padding: 10px 15px;
+   text-align: center;
+   color: aliceblue;
+   text-decoration: none;
+   margin-right: 20px;
+}
+
+.botonY {
+   margin-left: 80%;
+}
+
+.btn-2 {
+   background-color: rgb(7, 143, 143);
+   padding: 10px 15px;
+   color: aliceblue;
+   text-decoration: none;
+   border: 0;
+   cursor: pointer;
+}
+
+.box-container {
+   margin: auto;
+   margin-top: -05%;
+   position: relative;
+   width: 300px;
+   height: 30px;
+   border: 2px solid #048a7f;
+   padding: 0px 10px;
+   border-radius: 50px;
+
+}
+
+a {
+   padding: 10px;
+   color: #ff0000;
+}
+
+.elements {
+   width: 100%;
+   height: 100%;
+   vertical-align: middle;
+}
+
+.search {
+   border: none;
+ 
+   text-align: center;
+   height: 100%;
+   width: 100%;
+   padding: 0px 25px;
+   border-radius: 50px;
+   font-size: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.search:focus {
+   outline: none;
+}
+
+.logo {
+   width: 25%;
+   text-align: center;
+   margin-left: 40%;
+   padding: 0;
+   margin-top: 80px;
+   margin-bottom: 20px;
+   padding-bottom: 20px;
+}
+
+body::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url('imagenes/Fondo\ Salud\ Sexual.png');
+   background-repeat: repeat-x;
+   background-size: 170px;
+   opacity: 0.7;
+   /* Ajusta el valor de la opacidad (0.7 en este caso) */
+   z-index: -1;
+}
+
+h1 {
+   padding: 0px 0;
+   margin-left: 35%;
+   margin-top: 0;
+   padding-top: 0;
+   width: 400px;
+   color: #02646b;
+
+
+}
+.tex-box{
+   color: #02646b;
+
+}
+
+#articulos-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: justify;
+   flex-wrap: wrap;
+   padding: 0px;
+   color: #fffb00;
+
+}
+
+.articulo-card {
+   flex-basis: 300px;
+   flex-grow: 1;
+   padding: 20px;
+   margin: 10px;
+   background-color: #ffffff;
+   background-color: rgb(7, 143, 143);
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+.articulo-card:hover {
+   transform: translateY(-5px);
+   cursor: pointer;
+}
+
+.articulo-card h3 {
+   margin-top: 0;
+
+}
+
+.articulo-card img {
+   width: 100%;
+   height: auto;
+   margin-bottom: 10px;
+}
+
+.articulo-card p {
+   margin-bottom: 0;
+   display: inline-block;
+   padding: 0px;
+   margin-top: 0px;
+   color: #ffffff;
+
+}
+
+/* Estilos para el modal */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+   background-color: #e4e4e4;
+   margin: 0 auto 0 auto;
+   /* Ajustamos los márgenes */
+   padding: 20px;
+   border: 1px solid #888;
+   width: auto;
+   max-width: 60%;
+   box-sizing: border-box;
+   text-align: center;
+   overflow: auto;
+   border-radius: 10px;
+   border: 3px solid rgb(4, 105, 92);
+}
+
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.modal-imagen {
+   display: block;
+   width: 300px;
+   height: auto;
+   max-width: 100%;
+   max-height: 100%;
+   margin: 20px auto;
+   object-fit: contain;
+}
+
+#modal-contenido {
+   line-height: 1.5;
+   text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+   .modal-content {
+      margin: 20px;
+      padding: 10px;
+      width: auto;
+      max-width: none;
+      border-radius: 10px;
+   }
+
+   .modal-imagen {
+      max-width: 100%;
+   }
+}
+
+.modal-abierto {
+   animation: abrirModal 0.2s ease-out;
+}
+
+@keyframes abrirModal {
+   0% {
+      opacity: 0.2;
+      transform: scale(2.3);
+   }
+
+   100% {
+      opacity: 1;
+      transform: scale(1.2);
+   }
+}
+
+.modal-cerrado {
+   animation: cerrarModal 0.3s ease;
+}
+
+@keyframes cerrarModal {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+
+   80% {
+      opacity: 0;
+      transform: scale(3);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(2);
+   }
+}
+
+.articulo-card.primer-articulo {
+   background-color: #ff0000;
+   /* Color diferente para la primera tarjeta */
+}
